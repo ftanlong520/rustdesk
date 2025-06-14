@@ -972,10 +972,10 @@ pub fn get_api_server(api: String, custom: String) -> String {
         res.pop();
     }
     if res.starts_with("https")
-        && res.ends_with(":21114")
-        && get_builtin_option(config::keys::OPTION_ALLOW_HTTPS_21114) != "Y"
+        && res.ends_with(":15363")
+        && get_builtin_option(config::keys::OPTION_ALLOW_HTTPS_15363) != "Y"
     {
-        return res.replace(":21114", "");
+        return res.replace(":15363", "");
     }
     res
 }
@@ -1003,7 +1003,7 @@ fn get_api_server_(api: String, custom: String) -> String {
             return format!("http://{}", s);
         }
     }
-    "http://cgd.gdhxf.vip:21114".to_owned()
+    "http://cgd.gdhxf.vip:15363".to_owned()
 }
 
 #[inline]
